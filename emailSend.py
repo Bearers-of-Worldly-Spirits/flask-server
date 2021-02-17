@@ -3,8 +3,9 @@ import os
 import base64
 
 class emailSend:
-	def __init__(self, form_name):
+	def __init__(self, form_name, email):
 		self.form_name = form_name
+		self.email = email
 	
 	def convertBase64(self):
 		with open("tax-filler/filled/f" + self.form_name + ".pdf", "rb") as pdf_file:
@@ -24,7 +25,7 @@ class emailSend:
 								},
 								"To": [
 										{
-												"Email": "mpwadekar@ucdavis.edu",
+												"Email": self.email,
 												"Name": "User"
 										}
 								],

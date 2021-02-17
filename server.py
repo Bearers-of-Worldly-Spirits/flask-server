@@ -13,7 +13,7 @@ def form(user_id, form_id):
     fillPdf = fillPDFData()
     fillPdf.exec(request.json, "8843")
 
-    email = emailSend("8843")
+    email = emailSend("8843", request.json["email"])
     email.exec()
 
     print(request.json)
