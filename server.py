@@ -27,7 +27,7 @@ def form(user_id, form_id):
 @app.route('/due', methods = ['GET', 'POST'])
 def due():
     today = datetime.date.today()
-    future = datetime.date(2021,4,30)
+    future = datetime.date(2021,5,17)
     diff = (future - today).days
 
     return {
